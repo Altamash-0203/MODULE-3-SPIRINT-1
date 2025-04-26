@@ -6,37 +6,35 @@
     <title>Document</title>
 </head>
 <body>
-    <div>
-        <ul>
-            <li>html</li>
-            <li>css</li>
-            <li>js</li>
-        </ul>
-        <button onclick="additem()">add item</button>
+    <h1 id="hading"></h1>
+    <div class="container">
+    <h4>query selector example</h4>
     </div>
+
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, nisi!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor fuga soluta quos ipsa neque aliquam vero iusto, quidem veniam eius?</p>
+
 </body>
 </html>
 
 <script>
-    function additem(){
-let ul=document.querySelector('ul')
+    // get element by id
+    let h1=document.getElementById('hading')
+    h1.innerText="Welcome to the DOM World!."
 
-let li=document.createElement('li')
-li.innerText="new item"
-ul.appendChild(li)
-    
-let odd=document.getElementsByTagName('li')
 
-for(i=0;i<odd.length;i++){
-    if(i%2==0){
-        odd[i].style.fontFamily="italic"
-        odd[i].style.color="red"
-    }
-    else{
-        odd[i].style.font="bold"
-        odd[i].style.color="blue"
+    //query selector
+
+    let div=document.querySelector('div')
+    div.style.backgroundColor="yellow"
+
+
+    //get element by tag name
+    let p=document.getElementsByTagName('p')
+    for(i=0;i<p.length;i++){
+        p[i].style.color="blue"
     }
 
-}
-    }
+
 </script>
