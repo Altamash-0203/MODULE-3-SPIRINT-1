@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <input type="text" id="taskinput" placeholder="Enter a task">
+
+  <button onclick="addtask()">Add Task</button>
+
+  <ul id="list"></ul>
+
+  <script>
+    function addtask() {
+      
+      let input=document.getElementById('taskinput')
+      
+      let task=input.value
+
+      if(task=='') {
+        alert("Please enter a task!")
+        return
+      }
+
+      let li=document.createElement('li')
+      
+      li.textContent=task+' '
+
+      let completebtn=document.createElement('button')
+      
+      completebtn.textContent='Complete'
+      
+      completebtn.onclick=function() {
+        completetask(li)
+      }
+
+      let deletebtn=document.createElement('button')
+      
+      deletebtn.textContent='Delete'
+      
+      deletebtn.onclick=function() {
+        deletetask(li)
+      }
+
+      li.appendChild(completebtn)
+      
+      li.appendChild(deletebtn)
+
+      document.getElementById('list').appendChild(li)
+      
+      input.value=''
+    }
+
+    function completetask(item) {
+      
+      item.style.color='green'
+      item.style.textTransform="uppercase"
+    }
+
+    function deletetask(item) {
+      
+      item.remove()
+    }
+  </script>
+
+</body>
+</html>
