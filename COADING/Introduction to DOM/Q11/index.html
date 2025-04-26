@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>html</li>
+            <li>css</li>
+            <li>js</li>
+        </ul>
+        <button onclick="additem()">add item</button>
+    </div>
+</body>
+</html>
+
+<script>
+    function additem(){
+let ul=document.querySelector('ul')
+
+let li=document.createElement('li')
+li.innerText="new item"
+ul.appendChild(li)
+    
+let odd=document.getElementsByTagName('li')
+
+for(i=0;i<odd.length;i++){
+    if(i%2==0){
+        odd[i].style.fontFamily="italic"
+        odd[i].style.color="red"
+    }
+    else{
+        odd[i].style.font="bold"
+        odd[i].style.color="blue"
+    }
+
+}
+    }
+</script>
