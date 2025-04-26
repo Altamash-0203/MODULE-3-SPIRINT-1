@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>title</title>
+</head>
+<body>
+  <input type="text" id="message" placeholder="enter text">
+  <button id="textButton">Change Text</button>
+  <br><br>
+
+  <input type="text" id="colorbtn" placeholder="enter color">
+  <button id="colorButton">Change Background</button>
+  <br><br>
+
+  <div id="box" style="width: 1000px; height: 1000px; background-color: lightgray;">This is the box</div>
+
+  <script>
+    const messageInput = document.getElementById('message');
+    const textButton = document.getElementById('textButton');
+
+    const colorInput = document.getElementById('colorbtn');
+    const colorButton = document.getElementById('colorButton');
+
+    const box = document.getElementById('box');
+
+    textButton.addEventListener('click', () => {
+      box.innerText = messageInput.value;
+    });
+
+    colorButton.addEventListener('click', () => {
+      const color = colorInput.value.trim();
+      box.style.backgroundColor = color;
+    });
+  </script>
+</body>
+</html>
