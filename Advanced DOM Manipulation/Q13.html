@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outer" style="padding: 20px; border: 2px solid;">
+        outer div
+        <div id="mid" style="padding: 20px; border: 2px solid;">
+            middle div
+            <div id="inner" style="padding: 20px; border: 2px solid;">
+           inner div
+                <button id="btn">click me</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+  
+
+
+  <script>
+    let out=document.getElementById('outer')
+    let mid= document.getElementById('mid')
+    let inner=document.getElementById('inner')
+    let btn=document.getElementById('btn')
+  
+    outer.addEventListener('click', () => {
+      alert('outer div clicked');
+    });
+    mid.addEventListener('click', () => {
+      alert('middle dic clicked');
+    });
+    inner.addEventListener('click', () => {
+      alert('inner div clicked');
+    });
+  
+    btn.addEventListener('click', (event) => {
+      event.stopPropagation(); 
+      alert('Button clicked');
+    });
+  </script>
+  
