@@ -17,11 +17,11 @@
       const taskText = taskInput.value;
       const newTask = document.createElement('li');
       newTask.innerHTML = taskText;
-      taskList.appendChild(newTask); // Issue 1: Incorrect method
+      taskList.appendChild(newTask); // implanted appendchild method
     };
 
     taskList.onclick = function (e) {
-      if (e.target.tagName === 'LI') {
+      if (e.target.tagName === 'LI') { //added target 
         e.target.remove(); // Issue 2: Incorrect condition
       }
     };
