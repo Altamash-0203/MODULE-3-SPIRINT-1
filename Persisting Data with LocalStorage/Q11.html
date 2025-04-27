@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" placeholder="note here" id="note"></textarea>
+    <button onclick="save()">add</button>
+    <button onclick="notes()">notes</button>
+    <button onclick="clear()">clear</button>
+
+</body>
+</html>
+
+<script>
+    function save(){
+    let txt=document.getElementById('note').value 
+
+    if(txt.length>0){
+        localStorage.setItem("note",txt)
+        alert("saved")
+    }
+    else{
+        alert("add note")
+    }
+    
+    }
+
+
+    function notes() {
+let save=localStorage.getItem("note")
+if(save){
+    document.getElementById("note").value=save
+    alert("note load")
+}
+else{
+    alert("empty")
+}
+    }
+
+
+    function clear(){
+localStorage.removeItem("note")
+document.getElementById("note").value=''
+alert("cleared")
+    }
+    
+</script>
