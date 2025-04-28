@@ -1,0 +1,65 @@
+body{
+    background-color: white;
+}
+
+
+.header{
+    height: 20px;
+    background-color: dimgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav{
+    display:flex;
+    justify-content:space-around;
+    margin-top: 20px;
+    font-size: small;
+    background-color: rgb(165, 188, 125);
+   
+}
+
+.nav a{
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    font-weight: bolder;
+}
+
+.nav a:hover{
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background-color: aliceblue;
+}
+
+
+.input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.input form{
+    text-align: center;
+    width: 500px;
+    border: 1px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: bisque;
+}
+.input textarea{
+    width: 200px;
+    height: 100px;
+}
+
+#submit{
+margin-bottom: 10px;
+width: 200px;
+border-radius: 10px;
+border: 2px dotted blue;
+background-color: aqua;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-size: 20px;
+}

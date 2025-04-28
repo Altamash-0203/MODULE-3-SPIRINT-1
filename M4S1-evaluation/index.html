@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c6f780237c.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    <header>
+        <div class="header">
+            <marquee behavior=""  direction=""><h4>Enjoy Delicious Meals!....</h4></marquee>
+        </div>
+    </header>
+<!-- navbar -->
+    <nav>
+        <div class="nav">
+            <a href="">Home</a>
+            <a href="">Add Recipe</a>
+            <a href="" id="view" onclick="view()">View Recipes</a>
+            <a href="" id="btnbg" onchange="changebg()"><i class="fa-solid fa-sun"></i></a>
+        </div>
+    </nav>
+
+    <!-- input -->
+     <section id="content">
+<div class="input">
+    <form action="">
+        <label for="name">Recipe name:</label><br>
+        <input type="text" name="" id="name" placeholder="Enter Recipe Name"><br><br>
+        <label for="category">Select category:</label>
+        <select name="" id="category">
+            <option value="Breakfast">Breakfast</option>
+            <option value="Lunch">Lunch</option>
+            <option value="Dinner">Dinner</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Drinks">Drinks</option>
+        </select> 
+        <br> <br>
+         <label for="ingredients">Enter ingredients:</label> <br>
+        <textarea name="" id="ingredients" placeholder="Enter Recipe ingredients"></textarea> <br><br>
+        <label for="steps">Enter Steps:</label><br>
+        <textarea name="" id="steps" placeholder="Enter Steps to Make recipe"></textarea> <br> <br>
+
+        <button id="submit" onclick="add()">Submit</button>
+     </form>
+</div>
+
+<!-- display  -->
+
+<div class="display">
+
+</div>
+</section>
+<script src="script.js"></script>
+</body>
+
+</html>
+
+
+<script>
+    let btnbg=document,getElementsById('btnbg')
+    let body=document.getElementsByTagName('body')
+
+    btnbg.addEventListener('click',()=>{
+        body.style.backgroundColor='grey'
+    })
+
+</script>
